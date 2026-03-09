@@ -83,7 +83,7 @@ export default function Home() {
               Запиши се и ще получиш покана веднага щом отворим ранния достъп.
             </p>
             <form
-              action="[ТВОЯТ_FORMSPREE_ЛИНК]"
+              action="https://formspree.io/f/xpqyqdgv"
               method="POST"
               className="mt-5 flex flex-col gap-3 sm:flex-row"
             >
@@ -143,7 +143,11 @@ export default function Home() {
               и максимална стойност.
             </p>
 
-            <div className="mt-8 space-y-4">
+            <div className="relative mt-8 space-y-4">
+              <div
+                aria-hidden="true"
+                className="absolute left-10 top-5 hidden h-[calc(100%-2.5rem)] w-px bg-slate-200 sm:block"
+              />
               {roadmap.map((item) => (
                 <div
                   key={item.step}
@@ -185,7 +189,7 @@ export default function Home() {
                 го направиш с едно натискане.
               </p>
               <a
-                href="https://[ТВОЯТ_REVOLUT_ЛИНК]"
+                href="https://revolut.me/veselin_v06"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-6 inline-flex h-12 items-center justify-center rounded-xl bg-emerald-500 px-6 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emerald-300"
@@ -200,10 +204,10 @@ export default function Home() {
                 Имаш идеи, въпроси или искаш да участваш в бета тестовете?
               </p>
               <a
-                href="mailto:kontakt@planinskiradar.bg"
+                href="mailto:contact@planinskiradar.com"
                 className="mt-4 inline-block text-base font-medium text-sky-200 underline decoration-sky-300 underline-offset-4 transition-all duration-300 hover:text-white"
               >
-                kontakt@planinskiradar.bg
+                contact@planinskiradar.com
               </a>
             </div>
           </div>
