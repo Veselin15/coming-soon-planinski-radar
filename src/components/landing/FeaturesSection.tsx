@@ -3,7 +3,11 @@ import { featureCards } from "./data";
 
 export function FeaturesSection() {
   return (
-    <section aria-labelledby="features-heading" className="space-y-6">
+    <section
+      id="features"
+      aria-labelledby="features-heading"
+      className="scroll-mt-24 space-y-6"
+    >
       <div className="max-w-2xl">
         <h2
           id="features-heading"

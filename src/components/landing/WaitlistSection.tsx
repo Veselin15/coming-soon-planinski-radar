@@ -1,6 +1,9 @@
 export function WaitlistSection() {
   return (
-    <section className="rounded-3xl border border-blue-100 bg-white p-6 shadow-lg shadow-blue-100/60 sm:p-8">
+    <section
+      id="waitlist"
+      className="scroll-mt-24 rounded-3xl border border-blue-100 bg-white p-6 shadow-lg shadow-blue-100/60 transition-shadow duration-300 hover:shadow-xl hover:shadow-blue-100/80 sm:p-8"
+    >
       <div className="max-w-3xl">
         <h2 className="text-2xl font-bold text-slate-950 sm:text-3xl">
           Запиши се за ранна бета

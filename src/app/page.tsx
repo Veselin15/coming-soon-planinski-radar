@@ -1,7 +1,6 @@
 import { FeaturesSection } from "@/components/landing/FeaturesSection";
 import { FooterSection } from "@/components/landing/FooterSection";
 import { HeroSection } from "@/components/landing/HeroSection";
-import { PirinGallerySection } from "@/components/landing/PirinGallerySection";
 import { RoadmapSection } from "@/components/landing/RoadmapSection";
 import { SupportSection } from "@/components/landing/SupportSection";
 import { WaitlistSection } from "@/components/landing/WaitlistSection";
@@ -13,7 +12,6 @@ export default function Home() {
         <HeroSection />
         <WaitlistSection />
         <FeaturesSection />
-        <PirinGallerySection />
         <RoadmapSection />
         <SupportSection />
       </main>

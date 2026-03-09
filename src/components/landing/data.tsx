@@ -64,14 +64,3 @@ export const roadmapItems = [
   "3) Маркери за хижи с последен кадър от уебкамера и метео контекст.",
   "4) PWA версия с приоритет за мобилна употреба и офлайн достъп.",
 ];
-
-export const pirinWinterImages = [
-  {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bansko%20ski%202025%2028.jpg",
-    alt: "Пирин през зимата край Банско",
-  },
-  {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Vihren%20Peak.jpg",
-    alt: "Вихрен в Пирин планина през зимата",
-  },
-];

@@ -1,19 +1,21 @@
 import Image from "next/image";
-import { pirinWinterImages } from "./data";
+
+const heroBackgroundImage =
+  "https://pavelpronin.com/wp-content/uploads/2023/01/PolezhanZimaZalz.jpg";
 
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden rounded-3xl border border-green-100 bg-white/85 p-6 shadow-xl shadow-sky-100/60 backdrop-blur sm:p-10">
       <div className="absolute inset-0 -z-10">
         <Image
-          src={pirinWinterImages[0].src}
-          alt={pirinWinterImages[0].alt}
+          src={heroBackgroundImage}
+          alt="Панорама от Пирин през зимата"
           fill
           priority
           sizes="(max-width: 768px) 100vw, 1200px"
-          className="object-cover"
+          className="object-cover transition-transform duration-[2200ms] hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/30 to-white/92" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/65 via-slate-950/35 to-white/92" />
       </div>
 
       <span className="mb-5 inline-flex items-center rounded-full border border-white/40 bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur sm:text-sm">
@@ -36,15 +38,30 @@ export function HeroSection() {
       </div>
 
       <div className="mt-8 flex flex-wrap gap-3">
-        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-blue-800 sm:text-sm">
+        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-blue-800 transition-transform duration-300 hover:-translate-y-0.5 sm:text-sm">
           Официални сигнали
         </span>
-        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-emerald-800 sm:text-sm">
+        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-emerald-800 transition-transform duration-300 hover:-translate-y-0.5 sm:text-sm">
           Общностни доклади
         </span>
-        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-red-700 sm:text-sm">
+        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-red-700 transition-transform duration-300 hover:-translate-y-0.5 sm:text-sm">
           Рискови зони и инциденти
         </span>
+      </div>
+
+      <div className="mt-7 flex flex-wrap gap-3">
+        <a
+          href="#waitlist"
+          className="inline-flex h-11 items-center justify-center rounded-xl bg-white px-5 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-white/80 focus:ring-offset-2 focus:ring-offset-slate-900/30"
+        >
+          Искам ранен достъп
+        </a>
+        <a
+          href="#support"
+          className="inline-flex h-11 items-center justify-center rounded-xl border border-white/60 bg-white/10 px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/80 focus:ring-offset-2 focus:ring-offset-slate-900/30"
+        >
+          Подкрепи проекта
+        </a>
       </div>
     </section>
   );

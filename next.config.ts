@@ -5,13 +5,13 @@ const nextConfig: NextConfig = {
 		remotePatterns: [
 			{
 				protocol: "https",
-				hostname: "commons.wikimedia.org",
-				pathname: "/wiki/Special:FilePath/**",
+				hostname: "pavelpronin.com",
+				pathname: "/wp-content/uploads/**",
 			},
 			{
 				protocol: "https",
-				hostname: "upload.wikimedia.org",
-				pathname: "/**",
+				hostname: "gratsielablog.me",
+				pathname: "/wp-content/uploads/**",
 			},
 		],
 	},

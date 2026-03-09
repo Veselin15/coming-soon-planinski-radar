@@ -6,8 +6,8 @@ type FeatureCardProps = {
 
 export function FeatureCard({ title, description, icon }: FeatureCardProps) {
   return (
-    <article className="rounded-2xl border border-blue-100 bg-white/90 p-6 shadow-sm backdrop-blur">
-      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-green-100 to-blue-100 text-blue-700">
+    <article className="group rounded-2xl border border-blue-100 bg-white/90 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-100/80">
+      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-green-100 to-blue-100 text-blue-700 transition-transform duration-300 group-hover:scale-110">
         {icon}
       </div>
       <h3 className="mb-2 text-lg font-semibold text-slate-900">{title}</h3>

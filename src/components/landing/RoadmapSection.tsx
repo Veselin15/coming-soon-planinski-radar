@@ -17,7 +17,7 @@ export function RoadmapSection() {
         {roadmapItems.map((item) => (
           <li
             key={item}
-            className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3"
+            className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all duration-300 hover:border-blue-200 hover:bg-blue-50/60 hover:pl-5"
           >
             {item}
           </li>
