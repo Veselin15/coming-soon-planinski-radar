@@ -111,33 +111,43 @@ export default function Home() {
               Рискови зони и инциденти
             </span>
           </div>
+        </section>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
-            <article className="rounded-2xl border border-sky-200 bg-sky-50/80 p-4">
-              <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">
-                Цел на проекта
-              </p>
-              <p className="mt-2 text-sm text-slate-700">
-                По-безопасни решения в планината чрез данни на едно място.
-              </p>
-            </article>
-            <article className="rounded-2xl border border-emerald-200 bg-emerald-50/80 p-4">
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
-                Етап в момента
-              </p>
-              <p className="mt-2 text-sm text-slate-700">
-                Публична coming soon страница и подготовка на MVP архитектура.
-              </p>
-            </article>
-            <article className="rounded-2xl border border-amber-200 bg-amber-50/80 p-4">
-              <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
-                Прозрачност
-              </p>
-              <p className="mt-2 text-sm text-slate-700">
-                Сайтът е статичен и в момента не съхранява потребителски данни.
-              </p>
-            </article>
+        <section className="rounded-3xl border border-blue-100 bg-white p-6 shadow-lg shadow-blue-100/60 sm:p-8">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-bold text-slate-950 sm:text-3xl">
+              Запиши се за ранна бета
+            </h2>
+            <p className="mt-2 text-slate-600">
+              Остави своя имейл и ще те уведомим първи, когато пуснем
+              приложението.
+            </p>
           </div>
+
+          {/* This form submits directly to Formspree and does not require a backend. */}
+          <form
+            action="https://formspree.io/f/xpqyqdgv"
+            method="POST"
+            className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center"
+          >
+            <label htmlFor="waitlist-email" className="sr-only">
+              Твоят имейл адрес
+            </label>
+            <input
+              id="waitlist-email"
+              type="email"
+              name="email"
+              required
+              placeholder="Твоят имейл адрес"
+              className="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 text-base text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 sm:flex-1"
+            />
+            <button
+              type="submit"
+              className="inline-flex h-12 min-w-40 items-center justify-center rounded-xl bg-gradient-to-r from-green-600 to-blue-600 px-6 text-base font-semibold text-white transition hover:from-green-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2"
+            >
+              Абонирай ме
+            </button>
+          </form>
         </section>
 
         <section aria-labelledby="features-heading" className="space-y-6">
@@ -204,43 +214,42 @@ export default function Home() {
             постоянни разходи. Ако искаш да помогнеш за поддръжката, можеш да
             ме подкрепиш тук:
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-6">
             <a
-              href="https://www.buymeacoffee.com/"
+              href="https://revolut.me/veselin_v06"
               target="_blank"
-              rel="noreferrer noopener"
+              rel="noopener noreferrer"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2"
             >
               <svg
                 viewBox="0 0 24 24"
                 aria-hidden="true"
-                className="h-5 w-5 text-amber-600"
+                className="h-5 w-5 text-emerald-600"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.8"
               >
-                <path d="M7 5h9v9a4 4 0 0 1-4 4h-1a4 4 0 0 1-4-4V5Z" />
-                <path d="M16 8h2a2 2 0 1 1 0 4h-2" />
-                <path d="M6 21h12" />
+                <path d="M4 8.5h16" />
+                <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                <path d="M7 14h6" />
               </svg>
-              Подкрепи развитието
-            </a>
-            <a
-              href="mailto:hello@planinskiradar.com"
-              className="inline-flex h-12 items-center justify-center rounded-xl border border-slate-300 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2"
-            >
-              Контакт за партньорство
+              Подкрепи проекта чрез Revolut
             </a>
           </div>
-          <p className="mt-3 text-xs text-slate-600 sm:text-sm">
-            В момента не събираме заявки чрез форма. За въпроси и подкрепа
-            използвай директния контакт.
+          <p className="mt-4 text-sm text-slate-700">
+            За въпроси, идеи или партньорство, пиши ми директно на:{" "}
+            <a
+              href="mailto:contact@planinskiradar.com"
+              className="font-semibold text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-800"
+            >
+              contact@planinskiradar.com
+            </a>
           </p>
         </section>
       </main>
 
       <footer className="border-t border-slate-200 bg-white/80 px-4 py-5 text-center text-sm text-slate-600 sm:px-6">
-        © {new Date().getFullYear()} Планински Радар
+        © {new Date().getFullYear()} Планински Радар · planinskiradar.com
       </footer>
     </div>
   );
