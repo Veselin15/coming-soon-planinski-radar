@@ -6,28 +6,28 @@ export function FeaturesSection() {
     <section
       id="features"
       aria-labelledby="features-heading"
-      className="scroll-mt-24 space-y-6"
+      className="mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-8 sm:px-6 lg:px-8"
     >
-      <div className="max-w-2xl">
+      <div className="mb-8 text-center sm:mb-10">
         <h2
           id="features-heading"
-          className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl"
+          className="text-2xl font-bold text-slate-900 sm:text-3xl"
         >
           Основни възможности
         </h2>
         <p className="mt-2 text-slate-600">
-          Всичко важно за условията в планината, подредено ясно и достъпно
-          директно от телефона ти.
+          Всичко необходимо, за да планираш по-умно и да се движиш по-сигурно в
+          планината.
         </p>
       </div>
 
-      <div className="grid gap-4 sm:gap-5 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2">
         {featureCards.map((feature) => (
           <FeatureCard
             key={feature.title}
             title={feature.title}
             description={feature.description}
-            icon={feature.icon}
+            tag={feature.tag}
           />
         ))}
       </div>

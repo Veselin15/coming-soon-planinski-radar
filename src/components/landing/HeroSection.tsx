@@ -1,66 +1,80 @@
-import Image from "next/image";
-
 const heroBackgroundImage =
   "https://pavelpronin.com/wp-content/uploads/2023/01/PolezhanZimaZalz.jpg";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-green-100 bg-white/85 p-6 shadow-xl shadow-sky-100/60 backdrop-blur sm:p-10">
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src={heroBackgroundImage}
-          alt="Панорама от Пирин през зимата"
-          fill
-          priority
-          sizes="(max-width: 768px) 100vw, 1200px"
-          className="object-cover transition-transform duration-[2200ms] hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/65 via-slate-950/35 to-white/92" />
-      </div>
-
-      <span className="mb-5 inline-flex items-center rounded-full border border-white/40 bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur sm:text-sm">
-        В разработка / Очаквайте скоро
-      </span>
-
-      <div className="max-w-3xl">
-        <h1 className="text-4xl font-black tracking-tight text-white drop-shadow sm:text-5xl lg:text-6xl">
+    <section
+      className="relative isolate overflow-hidden"
+      style={{
+        backgroundImage: `url('${heroBackgroundImage}')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 to-slate-900/40" />
+      <div className="relative mx-auto flex min-h-[72vh] w-full max-w-6xl flex-col items-center justify-center px-4 py-20 text-center sm:px-6 lg:px-8">
+        <nav className="absolute top-6 hidden rounded-full border border-white/30 bg-white/10 p-1 backdrop-blur-md md:flex md:items-center md:gap-1">
+          <a
+            href="#waitlist"
+            className="rounded-full px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-white/20 hover:-translate-y-1"
+          >
+            Ранен достъп
+          </a>
+          <a
+            href="#features"
+            className="rounded-full px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-white/20 hover:-translate-y-1"
+          >
+            Възможности
+          </a>
+          <a
+            href="#moments"
+            className="rounded-full px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-white/20 hover:-translate-y-1"
+          >
+            Идеи
+          </a>
+          <a
+            href="#support"
+            className="rounded-full px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-white/20 hover:-translate-y-1"
+          >
+            Подкрепа
+          </a>
+        </nav>
+        <h1 className="text-4xl font-extrabold tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-6xl">
           Планински Радар
         </h1>
-        <p className="mt-4 text-xl font-medium text-sky-100 sm:text-2xl">
-          Твоят дигитален пазител за безопасност в планината.
+        <p className="mt-6 max-w-2xl text-base text-slate-100 sm:text-lg">
+          Умно планиране за сигурни изкачвания. Следи условията в планината с
+          по-ясна картина, навременни предупреждения и увереност преди всяко
+          приключение.
         </p>
-        <p className="mt-5 text-base leading-7 text-slate-100 sm:text-lg">
-          Създаваме динамична топографска карта, която комбинира сигнали от
-          общността за реални рискове по маршрутите с официални данни от
-          планинските служби. На едно място ще виждаш и актуални бюлетини, и
-          живи уебкамери за по-уверени решения преди и по време на преход.
-        </p>
-      </div>
-
-      <div className="mt-8 flex flex-wrap gap-3">
-        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-blue-800 transition-transform duration-300 hover:-translate-y-0.5 sm:text-sm">
-          Официални сигнали
-        </span>
-        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-emerald-800 transition-transform duration-300 hover:-translate-y-0.5 sm:text-sm">
-          Общностни доклади
-        </span>
-        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-red-700 transition-transform duration-300 hover:-translate-y-0.5 sm:text-sm">
-          Рискови зони и инциденти
-        </span>
-      </div>
-
-      <div className="mt-7 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="#waitlist"
+            className="inline-flex h-12 items-center justify-center rounded-xl bg-sky-500 px-6 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-sky-300"
+          >
+            Ранен достъп
+          </a>
+          <a
+            href="#features"
+            className="inline-flex h-12 items-center justify-center rounded-xl border border-white/40 bg-white/10 px-6 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white/50"
+          >
+            Виж възможностите
+          </a>
+          <a
+            href="#moments"
+            className="inline-flex h-12 items-center justify-center rounded-xl border border-white/40 bg-white/10 px-6 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white/50"
+          >
+            Идеи за деня
+          </a>
+        </div>
         <a
           href="#waitlist"
-          className="inline-flex h-11 items-center justify-center rounded-xl bg-white px-5 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-white/80 focus:ring-offset-2 focus:ring-offset-slate-900/30"
+          className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-slate-100/90 transition-all duration-300 hover:-translate-y-1 hover:text-white"
         >
-          Искам ранен достъп
-        </a>
-        <a
-          href="#support"
-          className="inline-flex h-11 items-center justify-center rounded-xl border border-white/60 bg-white/10 px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/80 focus:ring-offset-2 focus:ring-offset-slate-900/30"
-        >
-          Подкрепи проекта
+          Скролни надолу
+          <span aria-hidden="true" className="text-base">
+            ↓
+          </span>
         </a>
       </div>
     </section>
